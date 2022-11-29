@@ -10,7 +10,7 @@
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=MSG"/>
       <property name="javax.persistence.jdbc.user" value="daniel"/>
       <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-      <property name="javax.persistence.jdbc.password" value="7624"/>
+      <property name="javax.persistence.jdbc.password" value="4257"/>
     </properties>
   </persistence-unit>
 </persistence>

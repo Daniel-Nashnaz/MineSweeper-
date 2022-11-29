@@ -42,7 +42,7 @@ public final class RefundGame {
 
     public void insertToArray() throws SQLException {
         String username = "daniel";
-        String password = "7624";
+        String password = "4257";
         String url = "jdbc:sqlserver://localhost:1433;databaseName=MSG";
         con = DriverManager.getConnection(url, username, password);
         String query = "select * from BoardValue where BoardID = ? and UserID = ?";

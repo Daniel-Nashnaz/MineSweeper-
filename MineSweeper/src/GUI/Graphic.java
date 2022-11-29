@@ -329,12 +329,19 @@ public final class Graphic implements ActionListener, MouseListener {
                                 jbBoard[i][j].setIcon(null);
                                 gameLogic.removeFlag(i, j);
                                 biv.deleteFlag(i, j);
+                                this.arrayShow[i][j] = gameLogic.getLocationBy(i, j);
+                                /*for (int id = 0; id < this.Row; id++) {
+                                    for (int jd = 0; jd < this.Column; jd++) {
+                                        System.out.print(this.arrayShow[id][jd] + " ");
+                                    }
+                                    System.out.println("");
+                                }*/
                                 continue;
                             }
-                            if (this.arrayShow[i][j] == -2 || this.arrayShow[i][j] == -3) {
-                                //lock click
-                                continue;
-                            }
+                            //  if (this.arrayShow[i][j] == -2 || this.arrayShow[i][j] == -3) {
+                            //lock click
+                            //     continue;
+                            // }
                             //if there are more flags than mines! 
                             if (this.gameLogic.getSumFlag() < this.mines) {
                                 gameSound("FLAG");
@@ -346,6 +353,7 @@ public final class Graphic implements ActionListener, MouseListener {
                                     biv.insertMineOrClick(i, j, -2);
                                 }
                                 this.jbBoard[i][j].setIcon(gameImage.setImage(9));
+                                ifWin();
                                 return;
                             }
                         }

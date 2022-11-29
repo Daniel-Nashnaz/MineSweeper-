@@ -41,7 +41,7 @@ public class Game {
     }
 
     public int[][] getBoard() {
-        return Board;
+        return this.Board;
     }
 
     public void setBoard(int[][] Board) {
@@ -58,6 +58,10 @@ public class Game {
 
     public void setSumFlag(int sumFlag) {
         this.sumFlag = sumFlag;
+    }
+
+    public int getLocationBy(int i, int j) {
+        return Board[i][j];
     }
 
     /**
@@ -226,9 +230,10 @@ public class Game {
         if (Board[i][j] == -2) {
             this.sumFlag--;
             //fake mine os ckeck mineAround
-            if ((Board[i][j] = BoomAround(i, j)) == 0) {
+            //if ((Board[i][j] = BoomAround(i, j)) == 0) {
                 Board[i][j] = -1;
-            }
+            System.out.println(i+" " +j+" "+Board[i][j]);
+           // }
         }
         if (Board[i][j] == -3) {
             this.sumFlag--;

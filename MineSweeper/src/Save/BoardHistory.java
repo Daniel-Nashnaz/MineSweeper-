@@ -23,7 +23,7 @@ public final class BoardHistory {
     private ArrayList<HistoryTable> tables;
     private String modeGame;
     private final String username = "daniel";
-    private final String password = "7624";
+    private final String password = "4257";
     private final String url = "jdbc:sqlserver://localhost:1433;databaseName=MSG";
     private final int userId;
 
